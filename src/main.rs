@@ -1,6 +1,10 @@
 use std::io;
 
 fn main() {
+    start();
+}
+
+fn start() {
     let mut lang = String::new();
 
     println!("1. English   2. Español   3. Français   4. Svenska   5. Pyccкй   6. Cymraeg  7. 日本語");
@@ -89,6 +93,8 @@ fn sum(name: &str, lang: i64) {
         7 => println!("\n{}と{}の合計は{}に等しい。", x, y, sums),
         _ => println!("\nSum of {} and {} is {}.", x, y, sums),
     }
+    println!("\n");
+    start();
 }
 
 fn greet(name: &str, lang: i64) {
@@ -121,13 +127,13 @@ fn greet(name: &str, lang: i64) {
 
 fn language(lang: i64) {
     match lang {
-        1 => println!("English"),
-        2 => println!("Español"),
-        3 => println!("Français"),
-        4 => println!("Svenska"),
-        5 => println!("Pyccкй"),
-        6 => println!("Cymraeg"),
-        7 => println!("日本語"),
+        1 => println!("\nLanguage is set to English."),
+        2 => println!("\nEl idioma está configurado en Español."),
+        3 => println!("\nLa langue est définie sur le Français."),
+        4 => println!("\nSpråket är inställt på Svenska."),
+        5 => println!("\nЯзык установлен Pyccкй."),
+        6 => println!("\nGosodir iaith i'r Cymraeg."),
+        7 => println!("\n言語は日本語に設定されています。"),
         _ => println!("Other language"),
     }
 }
